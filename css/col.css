@@ -1,43 +1,26 @@
-
-/*  SECTIONS  ============================================================================= */
-
 .section {
 	clear: both;
 	padding: 0px;
 	margin: 0px;
 }
 
-/*  GROUPING  ============================================================================= */
-
-
 .group:before,
 .group:after {
     content:"";
     display:table;
 }
+
 .group:after {
     clear:both;
 }
-.group {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
-}
-
-/*  GRID COLUMN SETUP   ==================================================================== */
 
 .col {
 	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-	background: #ccc;
-	padding:1em 0;
-	text-align:center;
-
+	float: left;
+	margin: 0.2%;
+	padding: 0.5%;
+	text-align: center;
 }
-
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
-
-/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
 	.col { 
@@ -45,8 +28,39 @@
 	}
 }
 
+
 /* ADDITIONAL CLASSES FOR FRONTEND CHALLANGE TASK */
 
 .header {
 	padding: 3em 0;
 }
+
+.footer {
+	padding: 2em 0;
+}
+
+.grey {
+	background-color: #ccc;
+}
+
+.display {
+	width: 23.6%;
+    height: 24.9vw;
+	background-color: #E6B81A;
+	font-size: 1.2rem;
+}
+
+.img {
+    margin: 0;
+}
+
+.color-gold {
+	background-color: #E6B81A;
+}
+
+.text-box {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
