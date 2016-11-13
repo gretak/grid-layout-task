@@ -13,7 +13,6 @@
 	<title>Frontend task with Grid</title>
 	<meta name="author" content="www.grahamrobertsonmiller.co.uk">
 	<meta http-equiv="cleartype" content="on">
-	<link rel="shortcut icon" href="/favicon.ico">
 
 	<!-- Responsive and mobile friendly stuff -->
 	<meta name="HandheldFriendly" content="True">
@@ -24,10 +23,9 @@
 	<link rel="stylesheet" href="css/html5reset.css" media="all">
 	<link rel="stylesheet" href="css/col.css" media="all">
 	<link rel="stylesheet" href="css/8cols.css" media="all">
-	<link rel="stylesheet" href="css/12cols.css" media="all">
-	<link rel="stylesheet" href="css/helpers.css" media="all">
 
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 	<style type="text/css">
 	/*  
 	======================== 
@@ -40,8 +38,36 @@
 }
 h1 { font-size:2.2em; padding:0 0 .5em 0; }
 h2 { font-size:1.5em; }
+p { font-size:0.9em; line-height:1.2em; }
+.img {
+    cursor: pointer;
+}
+.nodisplay {
+	display: none;
+}
+.color-gold {
+	background-color: #E6B81A;
+}
+.display {
+	display: block;
+	width: 23.2%;
+    height: 25.6vw;
+	position: absolute;
+	margin: 0.9% 0% 1% 0%;
+	padding: 2em 0;
+	background-color: #E6B81A;
+}
+
+
 </style>
 
+<script>
+$(document).ready(function(){
+ $('.img').on('click', function(){
+    $('.id').toggleClass('display');
+});
+ })
+</script>
 </head>
 
 <body>
@@ -54,7 +80,18 @@ h2 { font-size:1.5em; }
 
 	<div class="section group">
 		<div class="col span_1_of_8">
-			1 of 8
+			<img class="col span_2_of_8 img" alt="clickable-image" src="img/arrow.png" />
+			<p class="col span_6_of_8">
+				<span style="font-weight: bold;">Lorem ipsum dolor sit amet, consectetur</span>
+				<span>Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </span>
+			</p>
+		</div>
+		<div class="col span_1_of_8 id nodisplay color-gold">
+			<img class="col span_2_of_8 img color-gold" alt="clickable-image" src="img/arrow.png" />
+			<p class="col span_6_of_8 color-gold">
+				<span style="font-weight: bold;">Lorem ipsum dolor sit amet, consectetur</span>
+				<span>Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </span>
+			</p>
 		</div>
 		<div class="col span_1_of_8">
 			1 of 8

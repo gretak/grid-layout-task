@@ -30,8 +30,9 @@
 }
 
 .span_1_of_8 {
-	width: 11.1%; 
-	padding-top: 8%;
+	width: 11.1%;
+	height: 11.8vw;
+	overflow: hidden; 
 }
 
 
